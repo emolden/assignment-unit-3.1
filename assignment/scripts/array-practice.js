@@ -148,8 +148,8 @@ console.log('gems with and', gemString);
 //     It should look something like:
 //       ['Tourmaline', 'Topaz', 'Tanzanite', 'Iolite', 'Emerald', 'Diamond', 'yellow', 'green']
 //     Now, console.log the new array.
-let colorfulGems = []
-
+let colorfulGems = [gems[0], gems[1], gems[2], gems[3], gems[4], gems[5], colors[0], colors[1]]
+console.log('coloful gems: ', colorfulGems);
 
 
 // DO NOT MODIFY
