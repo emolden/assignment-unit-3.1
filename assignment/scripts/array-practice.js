@@ -148,7 +148,27 @@ console.log('gems with and', gemString);
 //     It should look something like:
 //       ['Tourmaline', 'Topaz', 'Tanzanite', 'Iolite', 'Emerald', 'Diamond', 'yellow', 'green']
 //     Now, console.log the new array.
-let colorfulGems = [gems[0], gems[1], gems[2], gems[3], gems[4], gems[5], colors[0], colors[1]]
+
+//With loops method
+let colorfulGems = [];
+let i = 0;
+let w = 0;
+while (i < gems.length) {
+  colorfulGems.push(gems[i]);
+  i++;
+}
+
+while (w < colors.length) {
+  colorfulGems.push(colors[w]);
+  w++;
+}
+
+//Most efficient method
+//let colorfulGems = gems.concat(colors);
+
+//Brute force method
+// let colorfulGems = [gems[0], gems[1], gems[2], gems[3], gems[4], gems[5], colors[0], colors[1]]
+
 console.log('coloful gems: ', colorfulGems);
 
 
