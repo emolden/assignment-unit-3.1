@@ -23,7 +23,7 @@ console.log('Number of animals:', numberOfAnimals);
 // 2. TODO: Create a variable `numberOfFoods` and use the .length property
 //    to assign it the number value of how many items are inside `favoriteFoods`.
 //    Don't forget to console.log `numberOfFoods` to make sure your code worked!
-let numberOfFoods = favoriteFoods.length
+let numberOfFoods = favoriteFoods.length;
 console.log('Number of favorite foods:', numberOfFoods);
 
 // Accessing array items
@@ -62,7 +62,7 @@ console.log('--- 4. Adding and removing array items ---');
 
 // Example: Add an animal to the end of an array using the Array.push method.
 let animalToPush = 'penguin';
-animalArray.push(animalToPush);
+animalArray.push(animalToPush); //push adds item to the end of an array
 console.log('Added an animal to end,', animalArray);
 
 // 4.a. TODO: Create a variable `dessert` and assign it a string value of
@@ -75,7 +75,7 @@ console.log('added a food to the end', favoriteFoods);
 
 // Example: Add to the beginning of an array using the Array.unshift method.
 let animalToUnshift = 'walrus';
-animalArray.unshift(animalToUnshift);
+animalArray.unshift(animalToUnshift); //unshift adds item to the beginning of an array
 console.log(`Added an animal to beginning: ${animalArray}`);
 
 // 4.b. TODO: Create a variable `entree` and assign it a string value of
@@ -86,7 +86,7 @@ favoriteFoods.unshift(entree);
 console.log('added a food to the beginning:', favoriteFoods)
 
 // Example: Remove the last animal by using the Array.pop method.
-let removedAnimal = animalArray.pop();
+let removedAnimal = animalArray.pop(); // pop removes the last item in an array
 console.log('Removed the last animal', removedAnimal);
 console.log('The animals are now', animalArray);
 
@@ -104,7 +104,7 @@ console.log('Removed the last color', lastColor);
 console.log('The colors are now', colors);
 
 // Example: Remove the first animal using the Array.shift method.
-removedAnimal = animalArray.shift();
+removedAnimal = animalArray.shift(); // shift removes the first item in an array
 console.log('Removed the first animal', removedAnimal);
 console.log('The animals are now', animalArray);
 
@@ -128,8 +128,8 @@ console.log('updated second item', gems);
 
 // 5.b (STRETCH) TODO: Sort your gems array in reverse alphabetical order.
 //     Please console.log the sorted array.
-gems.sort();
-gems.reverse();
+gems.sort(); // sort puts the items in an array in alphabetical or ascending order
+gems.reverse(); // reverse puts the items in an array in the opposite order
 console.log('sorted gems', gems);
 
 // 5.c (STRETCH) TODO: Create a variable `gemString` and assign it a string value
@@ -139,7 +139,10 @@ console.log('sorted gems', gems);
 //       "Emerald and Diamond and Tourmaline and Topaz"
 //     🔥 You'll need to research the .join Array method. 🔥
 //     Don't forget to console.log `gemString`...
-let gemString = gems.join(' and ');
+
+// join creates one long string of the array items with the 
+//stuff in the parenthesis betweent the array items
+let gemString = gems.join(' and '); 
 console.log('gems with and', gemString);
 
 
@@ -153,7 +156,10 @@ console.log('gems with and', gemString);
 let colorfulGems = [];
 let i = 0;
 let w = 0;
-while (i < gems.length) {
+// i is starting at 0 and increasing till it is one less than the
+//length of the array. One less than the length will be the index 
+//number of the last item.
+while (i < gems.length) { 
   colorfulGems.push(gems[i]);
   i++;
 }
@@ -164,9 +170,12 @@ while (w < colors.length) {
 }
 
 //Most efficient method
+//concat combines two arrays into one array
 //let colorfulGems = gems.concat(colors);
 
 //Brute force method
+// The limitations of this method is that colorfulGems array won't 
+//automatically update if gems or colors arrays are updated
 // let colorfulGems = [gems[0], gems[1], gems[2], gems[3], gems[4], gems[5], colors[0], colors[1]]
 
 console.log('coloful gems: ', colorfulGems);
